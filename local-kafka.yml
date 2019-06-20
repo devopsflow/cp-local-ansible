@@ -1,0 +1,28 @@
+#- hosts: preflight
+- hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - import_role:
+      name: confluent.preflight
+    tags:
+      - pre-install
+- hosts: ssl_CA
+#- hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - import_role:
+      name: confluent.ssl_CA
+    tags:
+      - pre-install
+#- hosts: zookeeper
+- hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - import_role:
+      name: confluent.zookeeper
+#- hosts: broker
+- hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - import_role:
+      name: confluent.kafka-broker

@@ -2,6 +2,4 @@
 {% for key, value in zookeeper.config.items() %}
 {{key}}={{value}}
 {% endfor %}
-{% for host in groups['zookeeper'] %}
-server.{{ loop.index }}={{ host }}:2888:3888
-{% endfor %}
+server.1=127.0.0.1:2888:3888
