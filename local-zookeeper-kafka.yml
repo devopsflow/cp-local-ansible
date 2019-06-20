@@ -14,6 +14,12 @@
       name: confluent.ssl_CA
     tags:
       - pre-install
+#- hosts: zookeeper
+- hosts: 127.0.0.1
+  connection: local
+  tasks:
+  - import_role:
+      name: confluent.zookeeper
 #- hosts: broker
 - hosts: 127.0.0.1
   connection: local
