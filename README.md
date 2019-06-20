@@ -20,3 +20,25 @@ The services that can be installed from this repository are:
 # Documentation
 
 You can find the documentation for running this playbook at https://docs.confluent.io/current/tutorials/cp-ansible/docs/index.html.
+
+## How to use
+
+1. Install Zookeper & Kafka Brooker
+
+ - ansible-playbook -i local-hosts.yml local-zookeeper-kafka.yml -vvv
+
+2. Check services are running
+
+ - systemctl status confluent-* -l
+ 
+3. Install n Brokers
+
+ - ansible-playbook local-kafka.yml -vvv
+
+4. Service will not start
+
+ - - systemctl status confluent-* -l
+
+5. Change Zookeeper & kafka configuration files
+
+ - ansible-playbook local-add-broker.yml --extra-vars "zookeeper_id=1 zookeeper_ip=10.159.83.34 brooker_counter=3" -vvv
