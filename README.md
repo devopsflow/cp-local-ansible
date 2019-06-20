@@ -37,10 +37,10 @@ You can find the documentation for running this playbook at https://docs.conflue
 
 4. Service will not start
 
- - - systemctl status confluent-* -l
+ - systemctl status confluent-* -l
 
 5. Change Zookeeper & kafka configuration files in each new Broker
 
- - ansible-playbook local-add-broker.yml --extra-vars "zookeeper_id=1 zookeeper_ip=10.159.83.34 brooker_counter=2" -vvv
- - ansible-playbook local-add-broker.yml --extra-vars "zookeeper_id=1 zookeeper_ip=10.159.83.34 brooker_counter=3" -vvv
- - etc...
+ - ansible-playbook local-add-broker.yml --extra-vars "zookeeper_id=1 zookeeper_ip=10.159.83.34 brooker_counter=2" -vvv  
+ - ansible-playbook local-add-broker.yml --extra-vars "zookeeper_id=1 zookeeper_ip=10.159.83.34 brooker_counter=3" -vvv  
+ - etc...  
