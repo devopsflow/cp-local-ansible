@@ -1,0 +1,10 @@
+zookeeper:
+  user: cp-kafka
+  group: confluent
+  config_file: /etc/kafka/zookeeper.properties
+
+kafka:
+  broker:
+    user: cp-kafka
+    group: confluent
+    config_file: /etc/kafka/server.properties
