@@ -6,8 +6,8 @@
       name: confluent.preflight
     tags:
       - pre-install
-- hosts: ssl_CA
-#- hosts: 127.0.0.1
+#- hosts: ssl_CA
+- hosts: 127.0.0.1
   connection: local
   tasks:
   - import_role:
