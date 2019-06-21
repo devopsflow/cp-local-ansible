@@ -33,7 +33,7 @@ You can find the documentation for running this playbook at https://docs.conflue
  
 3. Install n Brokers
 
- - ansible-playbook local-kafka.yml -vvv
+ - ansible-playbook -i local-hosts.yml local-kafka.yml -vvv
 
 4. Service will not start
 
