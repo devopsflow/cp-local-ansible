@@ -8,7 +8,7 @@ confluent:
   package_name: confluent-platform-2.11
   support:
     customer_id: anonymous
-    metrics_enabled: true
+    metrics_enabled: false
   repository:
     debian:
       key_url: https://packages.confluent.io/deb/5.1/archive.key
