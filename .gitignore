@@ -12,3 +12,5 @@ security/*.req
 security/*.pem
 security/*.der
 security/*.p12
+
+local-hosts-with-fqdn.yml
